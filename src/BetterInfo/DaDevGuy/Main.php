@@ -11,7 +11,7 @@ use pocketmine\utils\Config;
 use Vecnavium\FormsUI\CustomForm;
 
 class Main extends PluginBase implements Listener{
-    
+   /**@var Main $main*/
     protected $info;
     
     public function onEnable(): void{
