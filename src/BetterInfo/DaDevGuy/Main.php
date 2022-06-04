@@ -9,6 +9,7 @@ use BetterInfo\DaDevGuy\Listener\EventListener;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 use Vecnavium\FormsUI\CustomForm;
+use BetterInfo\DaDevGuy\Commands\ProfileCommand;
 
 class Main extends PluginBase implements Listener{
    /**@var Main $main*/
@@ -18,6 +19,7 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->saveDefaultConfig();
         $this->info = new Config($this->getDataFolder() . "info.yml", Config::YAML);
+        $this->getServer()->getCommandMap()->register("profile", new ProfileCommand($this));
     
         if($this->getConfig()->get("config-ver") !== 1){
             $this->getLogger()->info("BetterInfo Config Is Not Updated, Please Delete The BetterInfo Folder In plugin_data And Restart The Server!");
