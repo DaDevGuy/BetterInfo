@@ -11,6 +11,9 @@ use pocketmine\utils\Config;
 use Vecnavium\FormsUI\CustomForm;
 
 class Main extends PluginBase implements Listener{
+    
+    protected $info;
+    
     public function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->saveDefaultConfig();
