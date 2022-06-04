@@ -39,9 +39,9 @@ class Main extends PluginBase implements Listener{
         $health = $player->getHealth();
         $maxhealth = $player->getHealth()->getMaxHealth();
         $line = "\n";
-        $kill = $this->main->info->getNested($player->getName() . ".kill");
-        $join = $this->main->info->getNested($player->getName() . ".join");
-        $death = $this->main->info->getNested($player->getName() . ".death");
+        $kill = $this->info->getNested($player->getName() . ".kill");
+        $join = $this->info->getNested($player->getName() . ".join");
+        $death = $this->info->getNested($player->getName() . ".death");
         $info = str_replace(['{health}', '{name}', '{maxhealth}', '{line}', '{kills}', '{firstjoin}', '{death}'], [$health, $name, $maxhealth, $line, $kill, $join, $death], $this->getConfig()->get("ui.content"));
         $form->setTitle($this->getConfig()->get("ui.title"));
         $form->setContent($info);
