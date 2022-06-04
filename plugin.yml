@@ -1,0 +1,14 @@
+name: BetterInfo 
+author: DaDevGuy
+main: BetterInfo\DaDevGuy\Main
+version: 1.0.0
+api: [4.0.0]
+
+commands: 
+ profile:
+  description: "Show Information About You"
+  permission: betterinfo.info.cmd
+
+permissions: 
+ betterinfo.info.cmd:
+  default: op

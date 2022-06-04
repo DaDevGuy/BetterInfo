@@ -1,0 +1,8 @@
+# INTERNAL DO NOT TOUCH
+
+config-ver: 1
+
+#CONFIG
+#Avaliable Tags {name}, {health}, {maxhealth}, {line}, {kills}, {firstjoin}, {death}
+ui.title: "BetterInfo"
+ui.content: "=================================={line}{line}name: {name}{line}{line}health: {health}/{maxhealth}{line}{line}=================================="
