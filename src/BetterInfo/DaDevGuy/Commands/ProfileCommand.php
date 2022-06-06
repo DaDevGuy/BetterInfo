@@ -17,6 +17,7 @@ class ProfileCommand extends Command implements PluginOwned{
     public function __construct(Main $plugin)
     {
         $this->plugin = $plugin;
+        parent::__construct("info", "Players Profile");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args)
